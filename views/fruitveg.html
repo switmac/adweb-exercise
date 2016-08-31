@@ -1,0 +1,10 @@
+<div id="fruitveg" ng-controller="FruitVegController as fruitvegController">
+    <h2>Fruits & Veggies</h2>
+    <input class="search" ng-model="search" placeholder="Search"/>
+    <div class="grid">
+        <div class="item" ng-click="show(plant)" ng-repeat="plant in plants | filter:search ">
+            <grid-thumbnail item="plant"></grid-thumbnail>
+        </div>
+    </div>
+    <modal></modal>
+</div>

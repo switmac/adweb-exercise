@@ -1,0 +1,10 @@
+<div id="animals" ng-controller="AnimalsController as animalsController">
+    <h2>Animals</h2>
+    <input class="search" ng-model="search" placeholder="Search"/>
+    <div class="grid">
+        <div class="item" ng-click="show(animal)" ng-repeat="animal in animals | filter:search ">
+            <grid-thumbnail item="animal"></grid-thumbnail>
+        </div>
+    </div>
+    <modal></modal>
+</div>

@@ -1,0 +1,26 @@
+{
+  "name": "adweb-exercise",
+  "version": "0.0.1",
+  "url": "https://github.com/switmac/adweb-exercise.git",
+  "description": "Adweb Exercise",
+  "main": "./app.js",
+  "scripts": {
+    "start": "http-server -a localhost -p 8000 -c-1 ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/switmac/adweb-exercise.git"
+  },
+  "keywords": [
+    "angularjs"
+  ],
+  "author": "switmac",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/switmac/adweb-exercise/issues"
+  },
+  "homepage": "https://github.com/switmac/adweb-exercise#readme",
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  }
+}

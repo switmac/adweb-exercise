@@ -1,0 +1,7 @@
+<div class="thumbnail" id="{{item.Id}}">
+    <div class="row">
+        <img ng-src="{{item.ImageURLs.Thumb}}">
+        <div class="title">{{item.Title}}</div>
+    </div>
+    <div class="description">{{item.Description | wordlimit }}</div>
+</div>

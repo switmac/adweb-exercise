@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <link href="css/main.css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <!-- AngularJS core library -->
+    <script src="scripts/angular.min.js"></script>
+
+    <!-- AngularJS routing library -->
+    <script src="scripts/angular-route.min.js"></script>
+</head>
+<body ng-app="app">
+<div class="main">
+    <div class="header" ng-controller="NavController as navController">
+        <button ng-class="getClass('/')" ng-click="go('/')">Animals</button>
+        <button ng-class="getClass('/fruitveg')" ng-click="go('/fruitveg')">Fruit & Veg</button>
+    </div>
+    <div ng-view></div>
+</div>
+
+<!-- Modules -->
+<script src="js/app.js"></script>
+
+<!-- Services -->
+<script src="js/services/modal-service.js"></script>
+<script src="js/services/animals-service.js"></script>
+<script src="js/services/fruitveg-service.js"></script>
+
+<!-- Controllers -->
+<script src="js/controllers/navigation-controller.js"></script>
+<script src="js/controllers/modal-controller.js"></script>
+<script src="js/controllers/animals-controller.js"></script>
+<script src="js/controllers/fruitveg-controller.js"></script>
+
+<!-- Directives -->
+<script src="js/directives/grid-thumbnail-directive.js"></script>
+<script src="js/directives/modal-directive.js"></script>
+
+<!-- Filters -->
+<script src="js/filters/wordlimit-filter.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<div class="modal" ng-show="show" ng-controller="ModalController as modalController">
+    <div class="modal-body">
+        <div class="content">
+            <img src="img/loading.gif" ng-src="{{img}}">
+            <div class="info">
+                <h3 class="title">{{data.Title}}</h3>
+                <div>
+                    <div class="label">Family</div>
+                    : {{data.Family}}
+                </div>
+
+                <div ng-if="data.CollectiveNoun">
+                    <div class="label">Collection</div>
+                    : {{data.CollectiveNoun}}
+                </div>
+                <div ng-if="data.Genus">
+                    <div class="label">Genus</div>
+                    : {{data.Genus}}
+                </div>
+                <div class="description">{{data.Description }}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-close" ng-click="close()">
+        <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+    </div>
+</div>

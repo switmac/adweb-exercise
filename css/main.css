@@ -1,0 +1,261 @@
+@import url('../font/font.css');
+
+body {
+    font-family: "Roboto";
+    background: repeating-linear-gradient(
+            to right,
+            #f6ba52,
+            #f6ba52 10px,
+            #ffd180 10px,
+            #ffd180 20px
+    );
+    background-size: 100% 80px;
+}
+
+.main {
+    width: 900px;
+    margin: 1em auto;
+    background: white;
+    padding: 1em;
+    -webkit-box-shadow: 0px 0px 10px #000000;
+    -moz-box-shadow: 0px 0px 10px #000000;
+    box-shadow: 0px 0px 10px #484848;
+}
+
+.main h2 {
+    text-align: center;
+    font-family: 'Arvo', serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-shadow: 1px 2px 0px grey;
+}
+
+.header button {
+    color: white;
+    padding: 0.5em 1em;
+    border: 0;
+    border-radius: 3px;
+    font-size: 1em;
+    background: #3e72b3;
+}
+
+.header button.active {
+    background: cornflowerblue;
+}
+
+.search {
+    width: 200px;
+    height: 25px;
+    border-radius: 2px;
+    border: 1px solid #a79e9e;
+    padding-left: 2px;
+}
+
+/* Grid Items */
+.row {
+    display: inline-flex;
+    padding: .5em;
+}
+
+.item:nth-child(odd) {
+    background: crimson;
+}
+
+.item:nth-child(even) {
+    background: #366071;
+}
+
+.item:nth-child(3n+3) {
+    margin-right: 0;
+    float: right;
+}
+
+.item {
+    width: 31%;
+    height: 200px;
+    border: 1px solid #bbb;
+    background: #eee;
+    display: inline-flex;
+    margin-right: 28px;
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+.item:hover {
+    box-shadow: 0px 0px 100px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.25);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.25);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.25);
+    transition: all 200ms ease-in;
+    transform: scale(1.25);
+}
+
+.item .title {
+    font-weight: 600;
+    font-size: 1em;
+    margin-left: 0.5em;
+    color: white;
+}
+
+.item img {
+    border: 1px solid silver;
+}
+
+.item .description {
+    background: aliceblue;
+    height: 100px;
+    padding: .5em;
+    font-size: 15px;
+    text-align: justify;
+}
+
+/* Fruit Veg View Style */
+#fruitveg .item:nth-child(odd) {
+    background: #3eb33e;
+}
+
+#fruitveg .item:nth-child(even) {
+    background: #865358;
+}
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+.modal-body {
+    width: 882px;
+    padding: 1em 1em 0.5em 1em;
+    line-height: 30px;
+    opacity: 1;
+    border: 1px solid black;
+    background: white;
+    margin: 3% auto;
+    border-radius: 3px;
+}
+
+.modal-close {
+    color: white;
+    font-size: 35px;
+    position: fixed;
+    top: 6%;
+    right: 145px;
+    cursor: pointer;
+    -webkit-animation-name: animateclose;
+    -webkit-animation-duration: 1s;
+    -moz-animation-name: animateclose;
+    -moz-animation-duration: 1.5s;
+    animation-name: animateclose;
+    animation-duration: 1s;
+}
+
+.modal .content {
+    display: inline-flex;
+    font-family: 'Raleway', sans-serif;
+}
+
+.modal .content img {
+    width: 70%;
+    border-radius: 2px;
+    height: 100%;
+    margin-right: 10px
+}
+
+.modal .content .info {
+    background: #eee;
+    border-radius: 2px;
+    padding: .5em;
+
+}
+
+.modal .content .title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.modal .content .label {
+    width: 85px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.modal .content .description {
+    margin-top: 10px;
+    text-align: justify;
+    font-size: 15px;
+}
+
+@-moz-document url-prefix() {
+
+    .modal-close {
+        top: 12%;
+    }
+
+    .modal-body {
+        margin: 6% auto;
+    }
+
+    .modal .content img {
+        height: inherit;
+    }
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes animateclose {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 6%;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes animateclose {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 12%;
+        opacity: 1;
+    }
+}
